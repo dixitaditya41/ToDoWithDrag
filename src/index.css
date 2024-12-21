@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* Set a blue gradient background */
+  background-color: #694F8E;
+}
+
+  
