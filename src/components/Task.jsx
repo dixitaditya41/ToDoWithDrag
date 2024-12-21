@@ -16,22 +16,34 @@ const Task = ({ index, task, handleRemoveTask, handleUpdateTask }) => {
       {...attributes}
       {...listeners}
       style={style}
-      className='flex justify-evenly items-center w-9/12 h-20 rounded-[40px] bg-custom-pink p-3'
+      className='flex flex-col md:flex-row justify-between items-center w-full md:w-9/12 h-auto md:h-20 rounded-lg bg-custom-pink p-4 gap-4'
     >
-      <div className='flex justify-center items-center w-1/3 gap-x-2 '>
-        <input type='checkbox' />
-        <p>{index + 1}</p>
-      </div>
-      <div className='w-1/3 p-2 m-2 '>
-        <p>{task.work}</p>
-      </div>
-      <div className='w-1/3'>
-        <button onClick={() => handleRemoveTask(index)}>Remove</button>
-      </div>
-      <div className='w-1/3'>
-        <button onClick={() => handleUpdateTask(index)}>Update</button>
+      
+      <div className='flex items-center gap-x-2'>
+        <input type='checkbox' className='w-4 h-4' />
+        <p className='text-sm md:text-base font-semibold'>{index + 1}</p>
       </div>
 
+      
+      <div className='text-center flex-1'>
+        <p className='text-sm md:text-base'>{task.work}</p>
+      </div>
+
+    
+      <div className='flex justify-end gap-2'>
+        <button
+          onClick={() => handleRemoveTask(index)}
+          className='px-4 py-2 bg-red-500 text-white rounded-lg text-sm md:text-base hover:bg-red-600'
+        >
+          Remove
+        </button>
+        <button
+          onClick={() => handleUpdateTask(index)}
+          className='px-4 py-2 bg-blue-500 text-white rounded-lg text-sm md:text-base hover:bg-blue-600'
+        >
+          Update
+        </button>
+      </div>
     </div>
   );
 };
