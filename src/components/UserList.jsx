@@ -4,7 +4,7 @@ const UserList = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    // Fetch data from the API
+    
     fetch('https://api.escuelajs.co/api/v1/users/')
       .then((response) => response.json())
       .then((data) => setUsers(data))
@@ -35,7 +35,7 @@ const UserList = () => {
             ))}
           </tbody>
         </table>
-        {/* Mobile View */}
+      
         <div className="grid grid-cols-1 gap-4 md:hidden">
           {users.map((user) => (
             <div

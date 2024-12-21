@@ -95,7 +95,7 @@ const ShowSection = () => {
 
       {isModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 px-4">
-          <div className="bg-white p-6 rounded-lg shadow-lg w-full sm:w-96">
+          <div className="bg-custom-pink p-6 rounded-lg shadow-lg w-full sm:w-96">
             <h2 className="text-lg font-semibold mb-4">Update Task</h2>
             <input
               type="text"
